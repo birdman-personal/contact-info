@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: url("/assets/bg.jpg"), no-repeat, center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  flex: 100%;
+  max-width: 500px;
+  background-color: #444;
+  margin: 20px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 32px;
+  color: #ea8685;
+  transition: 0.3s linear;
+}
+
+.card:hover .icon {
+  transform: scale(4);
+  opacity: 0;
+}
+.card-content h3,
+.card-content span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  opacity: 0;
+}
+.card-content h3 {
+  top: 20px;
+  text-transform: uppercase;
+  color: #ea8685;
+}
+
+.card-content span {
+  bottom: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.card:hover .card-content h3 {
+  opacity: 1;
+  transition: 0.3s linear;
+  top: 46px;
+}
+
+.card:hover .card-content span {
+  opacity: 1;
+  bottom: 46px;
+  transition: 0.3s linear;
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    flex: 1;
+    max-width: 300px;
+  }
+}
